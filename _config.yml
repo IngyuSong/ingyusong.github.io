@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: 송인규 # add your name
-author-img:  # add your photo
+author-img: profile.png # add your photo
 about-author: 안녕하세요. 송인규입니다. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
