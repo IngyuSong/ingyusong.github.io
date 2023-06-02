@@ -1,14 +1,12 @@
 ---
 layout: post
-title: 게시물 업로드 테스트
-date: 2023-06-03 00:51:20 +0300
+title: How To Start Posting
+date: 2023-06-02 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: software.jpg # Add image post (optional)
-fig-caption: # Add figcaption (optional)
-tags: [GitHub, Blog, Post, Test]
+img: how-to-start.jpg # Add image post (optional)
+tags: [Programming, Learn] # add tag
 comments: true
 ---
-
 # 게시물 업로드 테스트 입니다.
 * 첫번째 게시물 입니다.
 
