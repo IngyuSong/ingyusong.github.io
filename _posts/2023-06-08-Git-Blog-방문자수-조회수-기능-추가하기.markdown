@@ -1,0 +1,51 @@
+---
+layout: post
+title: Git Blog 방문자수 조회수 기능 추가하기
+date: 2023-06-08T00:00:00
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+img: 20230608/git-page.jpg # Add image post (optional)
+tags: [GitPage, Jekyll, GitBlog, Hits] # add tag
+comments: true
+---
+Jekyll로 만든 정적 사이트 같은 경우 자체적인 백엔드가 없기 때문에 페이지 방문자 수를 측정하거나 댓글 기능을 구현하기가 불가능 합니다.  
+하지만 댓글 기능을 Disqus와 같은 API를 이용해서 구현하는 것 처럼 페이지 조회수 기능도 **Hits**를 통해 구현이 가능합니다.
+
+> **Hits**란?  
+> **Hits**는 특정 URL이 몇번이나 로딩 되었는지를 알려주는 API입니다. 정적인 Git Page 환경에서는 방문자 수를 카운팅 하기 위해 많이 사용됩니다.
+
+**Hits**를 사용할 수 있는 페이지는 여러가지가 있는데 그 중에서 Hits Badge를 커스터마이징하여 사용할 수 있는 사이트를 소개하겠습니다.
+
+### **[hits.sh](https://hits.sh/)** 
+이 사이트의 Hits Badge에는 **오늘 조회수 / 전체 조회수**가 나오게 설정할 수 있기 때문에 사이트 방문자를 표시하기에 매우 좋습니다.
+위 사이트에 접속하면 **Hits Badge를 커스터마이징** 할 수 있는 화면이 나오게 됩니다.
+
+![hits.sh]({{site.baseurl}}/assets/img/230608/generate-badge.png)
+
+* URL: 상단에 있는 URL칸에 조회수를 측정할 사이트의 URL 주소를 입력합니다.
+* View Type: total을 선택하면 전체 조회수만 나오게 되고, today-total을 선택하게 되면 오늘 조회수 / 전체 조회수가 나옵니다.
+* Style: Badge의 모양 스타일을 지정할 수 있습니다.
+* Label: Badge의 좌측에 표시될 Label을 설정할 수 있습니다.
+* Extra Count: 초기 카운트 값을 설정할 수 있습니다.
+* Color: Badge의 우측 카운팅 되는 부분의 배경색을 지정할 수 있습니다.
+* Label Color: Badge의 좌측 Label 부분의 배경색을 지정할 수 있습니다.
+* Logo: Icons slugs 값을 입력하면 Label 좌측에 입력한 로고를 설정할 수 있습니다.
+
+위의 옵션을 변경하여 Badge를 커스터마이징 하였다면 다음은 옵션 우측에 있는 **HTML LINK를 복사**하여 **HTML파일에 적용**시켜 보겠습니다.
+
+![html-link]({{site.baseurl}}/assets/img/230608/html-link.png)
+
+HTML LINK에 명시되어 있는 태그를 복사하였다면 다음은 Git Page 레포지토리의 `_layouts/main.html`에 Badge의 배치를 **원하는 부분에 붙여넣기** 하시면 됩니다.  
+저 같은 경우에는 contact 섹션 밑에 배치할 것이기 때문에 section 태그와 copyright의 사이에 붙여넣었습니다. 또한 css로 Badge를 가운데 정렬 해주기 위해 따로 div를 지정해주고 불필요한 a태그는 지웠습니다.
+
+![html1]({{site.baseurl}}/assets/img/230608/html1.png)
+
+이제 `assets/main.css`로 와서 Badge를 **가운데 정렬** 해보겠습니다.  
+html의 div태그에 직접 style 설정을 해도 상관은 없지만 일관성을 유지하기 위해 css 파일에 설정을 해주었습니다.
+
+![css1]({{site.baseurl}}/assets/img/230608/css1.png)
+
+설정을 완료했으면 깃헙 레포지토리에 **commit & push**를 해주고 잠시 배포될 때까지 기다려 주면 정상적으로 적용이 된 것을 확인 할 수 있습니다.
+
+![page1]({{site.baseurl}}/assets/img/230608/page1.png)
+
+
