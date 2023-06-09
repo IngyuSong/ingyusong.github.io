@@ -54,12 +54,13 @@ html의 div태그에 직접 style 설정을 해도 상관은 없지만 일관성
 다만, HTML LINK의 경로가 살짝 다르기 때문에 간단하게만 설명하겠습니다.
 
 우선 위에서 했던 것과 같이 hits.sh 사이트에서 **Badge를 커스터 마이징** 해줍니다.
+* 게시물의 조회수는 전체 조회수만 나오게 할 것이므로 **View Type** 옵션을 **total**로 하여 전체 조회수만 나오게 설정을 했습니다.
 
 ![generate]({{site.baseurl}}/assets/img/20230608/generate.png)
 
 설정을 완료했으면 **HTML LINK를 복사**해줍니다.
 
-저는 게시글 페이지 제목 밑의 날짜 바로 아래에 Badge를 넣어줄 것이기 때문에 `_layout/post.html` 파일의 page-date 밑 부분에 코드를 붙여넣기 하였습니다.
+저는 게시물 페이지 제목 밑의 날짜 바로 아래에 Badge를 넣어줄 것이기 때문에 `_layout/post.html` 파일의 page-date 밑 부분에 코드를 붙여넣기 하였습니다.
 
 ![html2]({{site.baseurl}}/assets/img/20230608/html2.png)
 
