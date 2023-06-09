@@ -1016,6 +1016,12 @@ table tfoot td {
 
 .category-link {
   text-decoration-line: none;
+  color: #263959;
+}
+
+.category-link:hover {
+  text-decoration: underline;
+  opacity: .8;
 }
 
 .content-box {
@@ -1387,11 +1393,6 @@ a.newer-posts:hover {
 .categories-list span a {
   text-decoration: none;
   color: #263959;
-}
-
-.categories-list span a:hover {
-  text-decoration: underline;
-  opacity: .8;
 }
 
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
