@@ -1024,6 +1024,10 @@ table tfoot td {
   opacity: .8;
 }
 
+.category-link:visited {
+  text-decoration: none;
+}
+
 .content-box {
   padding: 20px;
   padding-left: 260px;
