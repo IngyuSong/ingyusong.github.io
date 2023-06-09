@@ -1000,6 +1000,24 @@ table tfoot td {
   margin: 0 0 10px;
 }
 
+.category-title{
+  text-align: center;
+}
+
+.category-ul {
+  text-align: center;
+  padding: 0;
+}
+
+.category-list {
+  display: inline-block;
+  list-style: none;
+}
+
+.category-link {
+  text-decoration-line: none;
+}
+
 .content-box {
   padding: 20px;
   padding-left: 260px;
@@ -1361,7 +1379,17 @@ a.newer-posts:hover {
   color: #263959;
 }
 
-.tag-list span a:hover {
+.categories-list span a:hover {
+  text-decoration: underline;
+  opacity: .8;
+}
+
+.categories-list span a {
+  text-decoration: none;
+  color: #263959;
+}
+
+.categories-list span a:hover {
   text-decoration: underline;
   opacity: .8;
 }

@@ -1,0 +1,24 @@
+---
+layout: main
+title: Category
+permalink: /categories/
+---
+
+<section class="blog-categories">
+    {% assign category = page.category | default: page.title %}
+    <h1>{{ category }}</h1>
+    {% if site.categories[category] == null %}
+    <h2>해당 카테고리에 등록된 게시물이 없습니다.</h2>
+    {% endif %}
+    {% for post in site.categories[category] %}
+    <h2>
+        <div class="categories-list">
+        <span><a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+        </a></span>
+            <small><span>{{ post.date | date: '%Y. %m. %d.' }}</span></small>
+        </div>
+    </h2>
+    {% endfor %}
+    </ul>
+</section>

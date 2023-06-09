@@ -11,6 +11,26 @@ layout: default
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
     </div>
+      <section class="category">
+          <h2 class="category-title">category</h2>
+          <ul class="category-ul">
+              {% assign pages_list = site.pages %}
+              {% for node in pages_list %}
+              {% if node.title != null %}
+              {% if node.layout == "category" %}
+              <li class="category-list">
+                  <a class="category-link {% if page.url == node.url %} active{% endif %}"
+                     href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+                  {% if site.categories[node.title] != null %}
+                  <span class="count">({{ site.categories[node.title].size }})</span>
+                  {% endif %}
+              </li>
+              <br>
+              {% endif %}
+              {% endif %}
+              {% endfor %}
+          </ul>
+      </section>
   </header> <!-- End Header -->
   <footer>
     <section class="contact">
